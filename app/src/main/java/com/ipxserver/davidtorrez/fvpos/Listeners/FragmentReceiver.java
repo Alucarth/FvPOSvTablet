@@ -35,29 +35,29 @@ public class FragmentReceiver extends BroadcastReceiver
     public void onReceive(Context context, Intent intent) {
 //        int operacion = intent.getIntExtra("operacion",-1);
         Log.v("Brian","get into onReceive from FragmentReceiver");
-        cambiarFragmento(intent);
+//        cambiarFragmento(intent);
     }
-    private void cambiarFragmento(Intent intent) {
-        int fragment_id = intent.getIntExtra("operacion",-1);
-
-        if(fragment_id==FRAGMENT_FACTURA)
-        {
-            listaProductos = (ArrayList<Product>)intent.getSerializableExtra("lista_seleccionados");
-            monto = intent.getDoubleExtra("monto",-1);
-            Log.i("David", "tamao del list product size " + listaProductos.size());
-//            Product product = new Product();
-//            product.setCost("23 ");
-//            product.setQty("222");
-//            product.setId("pa1");
-//            product.setNotes("its work2");
-//            main.getFragmentFactura().listAdapter.adcionarProducto(product);
+//    private void cambiarFragmento(Intent intent) {
+//        int fragment_id = intent.getIntExtra("operacion",-1);
 //
-        }
-        main.cambiarFragmento(fragment_id);
-
-
-
-    }
+//        if(fragment_id==FRAGMENT_FACTURA)
+//        {
+//            listaProductos = (ArrayList<Product>)intent.getSerializableExtra("lista_seleccionados");
+//            monto = intent.getDoubleExtra("monto",-1);
+//            Log.i("David", "tamao del list product size " + listaProductos.size());
+////            Product product = new Product();
+////            product.setCost("23 ");
+////            product.setQty("222");
+////            product.setId("pa1");
+////            product.setNotes("its work2");
+////            main.getFragmentFactura().listAdapter.adcionarProducto(product);
+////
+//        }
+//        main.cambiarFragmento(fragment_id);
+//
+//
+//
+//    }
 
     public ArrayList<Product> getListaProductos() {
         Log.i("David", "retornando lista  size " + listaProductos.size());

@@ -56,7 +56,6 @@ public class FragmentLista extends Fragment
             public void onClick(View v) {
 
                 Intent intent = new Intent("cambiar_fragmento");
-
                 intent.putExtra("operacion", FragmentReceiver.FRAGMENT_TABSWIPE);
                 getActivity().sendBroadcast(intent);
             }
